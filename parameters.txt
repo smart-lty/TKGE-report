@@ -4,3 +4,7 @@ TEST :  {'MRR': 0.515947014093399, 'hits@[1,3,10]': tensor([0.4158, 0.5696, 0.71
 python main.py --dataset ICEWS14 --optimizer Adagrad --max_epochs 100 --valid 10 --rank 100 --batch_size 128 --reg 
 0.01 --time_reg 0.01 --learning_rate 0.1
 TEST :  {'MRR': 0.5135368853807449, 'hits@[1,3,10]': tensor([0.4275, 0.5642, 0.6683])}
+
+python main.py --dataset ICEWS14 --optimizer Adagrad --max_epochs 100 --valid 10 --rank 200 --batch_size 128 --reg 0.1 --time_reg 0.1 --learning_rate 0.1 
+（只跑了80个epoch）
+TEST:  {'MRR': 0.5402622818946838, 'hits@[1,3,10]': tensor([0.4441, 0.5941, 0.7255])}

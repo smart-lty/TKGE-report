@@ -7,7 +7,7 @@ from torch import optim
 from modelAndRegularizer.regularizer import *
 from optimizer import Optimizer
 from utils import avg_both
-
+import re
 
 dataset = ['ICEWS14', 'ICEWS05-15']
 parser = argparse.ArgumentParser(
@@ -66,6 +66,7 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
+
 dataset = TemporalDataset(args.dataset)
 examples = torch.from_numpy(dataset.get_train().astype('int64'))
 
@@ -105,3 +106,6 @@ for epoch in range(args.max_epochs):
 
 test = avg_both(*dataset.eval(model, 'test', 50000))
 print("\t TEST : ", test)
+
+
+
